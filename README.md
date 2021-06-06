@@ -93,20 +93,6 @@ mutation {
 # middlewares :
 - JWT pour la sécurité
 - redis : pour sauvegarder les informations de l'utilisateur.
-# Architecture de projet:
--src
- -config
-    redis.init.ts
- -graphql
-    -resolvers
-    -schemas
-    -typeDefs
- -middleware
-formatGraphQlErrors.ts
-index.ts
-
-
-
 - description :
 resolvers :contient les fonctions pour alimententer les données pour les champs de schéma.
 typeDefs : représentant le schéma GraphQL de notre serveur
