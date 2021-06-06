@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    container_name: todo
+    restart: always
+    image: todo_docker_app
+    build: .
+    ports:
+      - "3000:3000"
+    external_links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  cache:
+    image: redis:alpine
+    ports:
+      - "53260:6379"
+    command: ['--requirepass "yS6B4C6eKCEgV7KxB7gxNZnW2BKY6N5b"']
