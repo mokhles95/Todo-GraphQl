@@ -1,5 +1,13 @@
 # Description de projet :
 c'est une petite application back-end de gestion de To-do List en NodeJs, TypeScript, avec GraphQL , MongoDB et redis
+# design 
+pour la conception de ce projet j'ai réalisé 3 schemas:
+- user
+- todo 
+- comment
+- chaque todo est crée par un seul utilisateur
+- un todo contient un ou plusieurs commentaire
+- chaque commentaire est crée par un seul utilisateur
 # pour lance ce projet il faut que vous suivez les étapes suivantes: 
 1- npm install ==> pour installer les dépendances
 2- npm start ==> pour lancer le projet
