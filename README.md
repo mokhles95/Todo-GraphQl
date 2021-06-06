@@ -8,7 +8,7 @@ c'est une petite application back-end de gestion de To-do List en NodeJs, TypeSc
 # scénario de test:
 # I) gestion des utilisateurs
 1- resgister : 
-mutation {
+- mutation {
   register(
     userInput: {
       userName: "mokhles"
@@ -21,13 +21,13 @@ mutation {
 }
 
 2- login : 
-query { 
+- query { 
 login(email:"mokhles@gmail.com",password:"123456") {message token}
 }
 ps : un token va etre générer apres le login 
 
 3- liste des utilisateurs : 
-query { 
+- query { 
 users {id userName email password}
 }
 ps : n'oubliez pas de passer le token dans le "header" 
@@ -36,7 +36,7 @@ example :
 
 # II) gestion des taches
 1- lorsque vous etes authetifier vous pouvez ajouter une tache
-mutation {
+- mutation {
   createTodo(
     todoInput: { name: "first todo", userId: "60b8f0b69509dc3b0c640136" }
   ) {
@@ -44,7 +44,7 @@ mutation {
   }
 }
 2 - modifier une todo: 
-mutation {
+- mutation {
   updateTodo(
     todoInput: {id:"60ba17d8d1609f1f0471b74d", name: "new todo" }
   ) {
@@ -52,7 +52,7 @@ mutation {
   }
 }
 3 - supprimer une todo :
-mutation {
+- mutation {
   deleteTodo(
     todoInput: {userId:"60ba146b887a043e68dd6847", id: "60ba17d8d1609f1f0471b74d " }
   ) {
@@ -61,7 +61,7 @@ mutation {
 }
 ps :  Un utilisateur ne pourra pas supprimer la tâche d un un autre utilisateur
 4- marquer un todo comme (complété/nom complété) 
-mutation {
+- mutation {
   changeStatus(
     todoInput: {
       id: "60ba17d8d1609f1f0471b74d"
@@ -72,7 +72,7 @@ mutation {
   }
 }
 5- partager une todo avec des autres utilisateurs
-mutation {
+- mutation {
   shareTodoWithUsers(
     todoInput: {
       id: "60ba17d8d1609f1f0471b74d"
@@ -83,7 +83,7 @@ mutation {
   }
 }
 6- commenter une todo:
-mutation {
+- mutation {
   commentTodo(
     todoInput: { id: "60ba17d8d1609f1f0471b74d", userId: "60b8f0b69509dc3b0c640136" , comment:"comment" }
   ) {
@@ -101,6 +101,6 @@ mutation {
 # Docker
 - J'ai utilisé docker-compose pour pour définir et exécuter l'application et la base de donnée sur Docker
 - pour éxucuter l'application sur docker il faut suiver les étapes suivates: 
-1)docker-compose build
-2)docker-compose up -d mongo
-3)docker-compose up
+1) docker-compose build
+2) docker-compose up -d mongo
+3) docker-compose up
