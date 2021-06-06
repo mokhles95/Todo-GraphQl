@@ -43,7 +43,7 @@ example :
     name
   }
 }
-2 - modifier une todo: 
+2- modifier une todo: 
 - mutation {
   updateTodo(
     todoInput: {id:"60ba17d8d1609f1f0471b74d", name: "new todo" }
