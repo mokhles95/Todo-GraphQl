@@ -35,7 +35,7 @@ example :
 {"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MGI4ZjBiNjk1MDlkYzNiMGM2NDAxMzYiLCJpYXQiOjE2MjI5ODk0NzcsImV4cCI6MTYyMzA3NTg3N30.oejhk4HRazNPWzvzLP88VNLvr4KkMUGYmjNDdGhIvZw"}
 
 # II) gestion des taches
-* 1- lorsque vous etes authetifier vous pouvez ajouter une tache
+1- lorsque vous etes authetifier vous pouvez ajouter une tache : 
 - mutation {
   createTodo(
     todoInput: { name: "first todo", userId: "60b8f0b69509dc3b0c640136" }
@@ -43,7 +43,7 @@ example :
     name
   }
 }
-* 2 - modifier une todo: 
+2 - modifier une todo: 
 - mutation {
   updateTodo(
     todoInput: {id:"60ba17d8d1609f1f0471b74d", name: "new todo" }
@@ -51,7 +51,7 @@ example :
     name
   }
 }
-* 3 - supprimer une todo :
+3- supprimer une todo :
 - mutation {
   deleteTodo(
     todoInput: {userId:"60ba146b887a043e68dd6847", id: "60ba17d8d1609f1f0471b74d " }
@@ -60,7 +60,7 @@ example :
   }
 }
 ps :  Un utilisateur ne pourra pas supprimer la tâche d un un autre utilisateur
-* 4- marquer un todo comme (complété/nom complété) 
+4- marquer un todo comme (complété/nom complété) 
 - mutation {
   changeStatus(
     todoInput: {
@@ -71,7 +71,7 @@ ps :  Un utilisateur ne pourra pas supprimer la tâche d un un autre utilisateur
     message
   }
 }
-* 5- partager une todo avec des autres utilisateurs
+5- partager une todo avec des autres utilisateurs
 - mutation {
   shareTodoWithUsers(
     todoInput: {
@@ -82,7 +82,7 @@ ps :  Un utilisateur ne pourra pas supprimer la tâche d un un autre utilisateur
     message
   }
 }
-* 6- commenter une todo:
+6- commenter une todo:
 - mutation {
   commentTodo(
     todoInput: { id: "60ba17d8d1609f1f0471b74d", userId: "60b8f0b69509dc3b0c640136" , comment:"comment" }
