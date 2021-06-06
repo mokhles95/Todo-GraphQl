@@ -112,3 +112,5 @@ ps :  Un utilisateur ne pourra pas supprimer la tâche d un un autre utilisateur
 1) docker-compose build
 2) docker-compose up -d mongo
 3) docker-compose up
+
+# NB :vous allez trouver tous les services commentés
