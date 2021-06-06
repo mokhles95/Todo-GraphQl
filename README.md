@@ -94,9 +94,9 @@ mutation {
 - JWT pour la sécurité
 - redis : pour sauvegarder les informations de l'utilisateur.
 - description :
-resolvers :contient les fonctions pour alimententer les données pour les champs de schéma.
-typeDefs : représentant le schéma GraphQL de notre serveur
-scheams: représente le models de notre application
+- resolvers :contient les fonctions pour alimententer les données pour les champs de schéma.
+- typeDefs : représentant le schéma GraphQL de notre serveur
+- scheams: représente le models de notre application
 
 # Docker
 - J'ai utilisé docker-compose pour pour définir et exécuter l'application et la base de donnée sur Docker
