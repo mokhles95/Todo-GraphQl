@@ -3,9 +3,8 @@ import JWTR from "jwt-redis";
 import { promisify } from "util";
 
 export const client = redis.createClient({
-  port: 53260,
+  port: 6379,
   host: "localhost",
-  password: "yS6B4C6eKCEgV7KxB7gxNZnW2BKY6N5b",
 });
 
 export const jwtr = new JWTR(client);
